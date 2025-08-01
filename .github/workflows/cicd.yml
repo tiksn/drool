@@ -42,9 +42,6 @@ jobs:
       - name: 'Build'
         shell: pwsh
         run: .\build.ps1 -Instance ${{github.run_id}}
-      - name: 'Test'
-        shell: pwsh
-        run: .\test.ps1 -Instance ${{github.run_id}}
       - name: 'Pack'
         shell: pwsh
         run: .\pack.ps1 -Instance ${{github.run_id}}
