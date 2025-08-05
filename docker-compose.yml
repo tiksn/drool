@@ -53,8 +53,11 @@ services:
       fusionauth:
         condition: service_healthy
     environment:
-      FUSIONAUTH_API_KEY: 047a124c-2dbc-4b68-84cc-55f9a204f4ea
-      FUSIONAUTH_BASE_URL: http://fusionauth:9011/
+      TF_IN_AUTOMATION: true
+      TF_INPUT: 0
+      TF_VAR_fusionauth_api_key: 047a124c-2dbc-4b68-84cc-55f9a204f4ea
+      TF_VAR_fusionauth_base_url: http://fusionauth:9011
+      TF_CLI_ARGS_apply: "-auto-approve"
     networks:
       - idp_net
 
