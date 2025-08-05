@@ -47,16 +47,16 @@ services:
       - ./kickstart:/usr/local/fusionauth/kickstart
     restart: unless-stopped
 
-  # drool:
-  #   image: tiksn/drool:latest
-  #   depends_on:
-  #     fusionauth:
-  #       condition: service_healthy
-  #   environment:
-  #     FUSIONAUTH_API_KEY: 047a124c-2dbc-4b68-84cc-55f9a204f4ea
-  #     FUSIONAUTH_BASE_URL: http://fusionauth:9011/
-  #   networks:
-  #     - idp_net
+  drool:
+    image: tiksn/drool:latest
+    depends_on:
+      fusionauth:
+        condition: service_healthy
+    environment:
+      FUSIONAUTH_API_KEY: 047a124c-2dbc-4b68-84cc-55f9a204f4ea
+      FUSIONAUTH_BASE_URL: http://fusionauth:9011/
+    networks:
+      - idp_net
 
 networks:
   fusionauth_db_net:
