@@ -1,7 +1,8 @@
 FROM hashicorp/terraform:1.12.2
 
-COPY . /terraform
+COPY ./terraform /terraform
 
 WORKDIR /terraform
 
-ENTRYPOINT ["terraform"]
+ENTRYPOINT ["/bin/sh", "-c"]
+CMD ["terraform init && terraform apply"]
