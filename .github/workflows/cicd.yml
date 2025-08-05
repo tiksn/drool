@@ -30,6 +30,8 @@ jobs:
       - name: 'Install InvokeBuild Module'
         shell: pwsh
         run: Install-Module -Name InvokeBuild -Force
+      - name: 'Setup Terraform'
+        uses: hashicorp/setup-terraform@v3
       - name: 'Restore'
         shell: pwsh
         run: .\restore.ps1 -Instance ${{github.run_id}}
