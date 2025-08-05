@@ -24,3 +24,14 @@ updates:
       - 'tiksn'
     assignees:
       - 'tiksn'
+  - package-ecosystem: 'terraform'
+    directory: '/terraform'
+    labels:
+      - 'dependencies'
+      - 'maintenance'
+    schedule:
+      interval: 'daily'
+    reviewers:
+      - 'tiksn'
+    assignees:
+      - 'tiksn'
