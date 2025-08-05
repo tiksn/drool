@@ -114,6 +114,7 @@ Task EstimateVersion Restore, {
 
 # Synopsis: Format
 Task Format Restore, Lint, {
+    Exec { terraform fmt -recursive }
 }
 
 # Synopsis: Lint
