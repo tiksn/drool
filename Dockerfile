@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:1.14.6
+FROM hashicorp/terraform:1.14.7
 
 COPY ./terraform /terraform
 
