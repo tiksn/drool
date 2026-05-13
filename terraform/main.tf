@@ -2,7 +2,7 @@ terraform {
   required_providers {
     fusionauth = {
       source  = "FusionAuth/fusionauth"
-      version = "1.3.3"
+      version = "1.3.4"
     }
   }
 }
